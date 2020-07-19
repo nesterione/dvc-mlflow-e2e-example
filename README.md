@@ -39,3 +39,22 @@ Configure bucket host name (optional)
 ```
 dvc remote modify s3remote endpointurl <YOUR URL TO BUCKET>
 ```
+
+2. Put data 
+
+```
+dvc add data/raw
+git commit -am "Added data"
+dvc push
+```
+
+3. Add preprocessing 
+
+```
+dvc run -f dataprep.dvc \
+        -d scripts/prepare_data.py -d data/raw -o data/prep \
+        python scripts/prepare_data.py "data/raw" "data/prep"
+```
+
+
+dvc run -f dataprep.dvc -d scripts/prepare_data.py -d data/raw -o data/prep python scripts/prepare_data.py "data/raw" "data/prep"
