@@ -1,0 +1,13 @@
+md5: 4237ff4c906b77947e63dd44a7892d5d
+cmd: python scripts/prepare_data.py data/raw data/prep
+deps:
+- md5: 877ab77a2757c779f56fdfbc6c707925
+  path: scripts/prepare_data.py
+- md5: b7d922d51f419be6193fa9252b38e581.dir
+  path: data/raw
+outs:
+- md5: 11e18ad223f363026d0d70ab640a8349.dir
+  path: data/prep
+  cache: true
+  metric: false
+  persist: false
