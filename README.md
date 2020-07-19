@@ -54,7 +54,10 @@ dvc push
 dvc run -f dataprep.dvc \
         -d scripts/prepare_data.py -d data/raw -o data/prep \
         python scripts/prepare_data.py "data/raw" "data/prep"
+
+git commit -am "Added preprocessing"
+git push
+dvc push
 ```
 
 
-dvc run -f dataprep.dvc -d scripts/prepare_data.py -d data/raw -o data/prep python scripts/prepare_data.py "data/raw" "data/prep"
