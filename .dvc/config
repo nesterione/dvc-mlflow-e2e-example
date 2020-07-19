@@ -1,0 +1,5 @@
+[core]
+    remote = s3remote
+['remote "s3remote"']
+    url = s3://dvc/imdb-e2e
+    endpointurl = http://188.246.227.23:9998/
